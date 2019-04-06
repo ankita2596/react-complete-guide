@@ -23,17 +23,17 @@ class App extends Component {
     }
   }
   componentWillMount(){
-    console.log('[App.js]inside componentWillMount');
+    console.log('[App.js]inside componentWillMount')
   }
   componentDidMount(){
-    console.log('[App.js]inside componentDidMount');
+    console.log('[App.js]inside componentDidMount')
   }
   shouldComponentUpdate(nextProps, nextState ){
-    console.log('[UPDATE App.js]inside shouldComponnetUpdate','nextProps :: ', nextProps, 'nextState ::', nextState);
+    console.log('[UPDATE App.js]inside shouldComponnetUpdate','nextProps :: ', nextProps, 'nextState ::', nextState)
     return true;
   }
   componentWillUpdate(nextProps, nextState){
-    console.log('[UPDATE App.js]inside componentWillUpdate', nextProps, nextState);
+    console.log('[UPDATE App.js]inside componentWillUpdate', nextProps, nextState)
   }
   componentDidUpdate(){
     console.log('[UPDATE App.js]inside componentDidUpdate');
@@ -49,7 +49,7 @@ class App extends Component {
     person.name = event.target.value;
     const persons = [...this.state.persons];
     persons[personIndex] = person;
-    this.setState( { persons : persons });
+    this.setState( { persons : persons })
   }
   deletePersonHandler = (personIndex) => {
     const persons = [...this.state.persons];
@@ -63,7 +63,7 @@ class App extends Component {
               showPersons: !doesShow,
               toggleClicked: prevState.toggleClicked + 1
             }
-    });  
+    }) 
   }
   loginHandler = () => {
     this.setState({authenticated: true})
